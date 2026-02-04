@@ -6,7 +6,7 @@
     <title>Pokedex</title>
 
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
   </head>
@@ -66,8 +66,92 @@
           <p class="loading__text">Lädt…</p>
         </div>
       </div>
+      <!-- DETAIL OVERLAY -->
+      <div
+        id="detailOverlay"
+        class="overlay overlay--detail d-none"
+        aria-hidden="true"
+      >
+        <div id="detailCard" class="detail" role="dialog" aria-modal="true">
+          <!-- Top -->
+          <div class="detail__top">
+            <div class="detail__head">
+              <span id="detailId" class="detail__id">#000</span>
+              <h2 id="detailName" class="detail__name">Pokemon</h2>
+            </div>
 
+            <div id="detailTypes" class="detail__types"></div>
 
+            <button id="closeDetailBtn" class="iconBtn" aria-label="Close">
+              ✕
+            </button>
+          </div>
+
+          <!-- Image -->
+          <div class="detail__imageWrap">
+            <img id="detailImage" class="detail__image" src="" alt="" />
+          </div>
+
+          <!-- Tabs -->
+          <nav class="tabs" aria-label="Detail tabs">
+            <button class="tabs__btn tabs__btn--active" data-tab="about">
+              About
+            </button>
+            <button class="tabs__btn" data-tab="stats">Base Stats</button>
+            <button class="tabs__btn" data-tab="evo">Evolution</button>
+          </nav>
+
+          <!-- Panels -->
+          <div class="panels">
+            <section id="tabAbout" class="panel panel--active">
+              <dl class="kv">
+                <div class="kv__row">
+                  <dt class="kv__key">Height</dt>
+                  <dd id="aboutHeight" class="kv__val">-</dd>
+                </div>
+                <div class="kv__row">
+                  <dt class="kv__key">Weight</dt>
+                  <dd id="aboutWeight" class="kv__val">-</dd>
+                </div>
+                <div class="kv__row">
+                  <dt class="kv__key">Base Exp</dt>
+                  <dd id="aboutBaseExp" class="kv__val">-</dd>
+                </div>
+                <div class="kv__row">
+                  <dt class="kv__key">Abilities</dt>
+                  <dd id="aboutAbilities" class="kv__val">-</dd>
+                </div>
+              </dl>
+            </section>
+
+            <section id="tabStats" class="panel">
+              <div id="statsList" class="stats"></div>
+            </section>
+
+            <section id="tabEvo" class="panel">
+              <div id="evoChain" class="evo"></div>
+              <p id="evoMessage" class="message" aria-live="polite"></p>
+            </section>
+          </div>
+
+          <!-- Gallery Navigation -->
+          <div class="detail__nav">
+            <button id="prevBtn" class="iconBtn" aria-label="Previous">
+              ←
+            </button>
+            <button id="nextBtn" class="iconBtn" aria-label="Next">
+              →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <footer class="page-footer">
+      <div class="footer-content">
+        <img src="./assets/Logo.png" alt="Developer Akademie Logo" class="footer-logo-img" />
+        <p>© 2023 Developer Akademie GmbH</p>
+      </div>
+   </footer>
 
     <script src="./js/templates.js"></script>
     <script src="./js/cache.js"></script>
