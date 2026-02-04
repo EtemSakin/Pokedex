@@ -12,6 +12,43 @@
   </head>
 
   <body onload="init()">
+
+    <header class="topbar" aria-label="Header">
+        <div class="topbar__inner">
+          <div class="brand" aria-label="Brand">
+            <img
+              class="brand__logo"
+              src="./assets/pokedexlogo.png"
+              alt="Pokédex logo"
+            />
+            <span class="brand__title">Pokédex</span>
+          </div>
+
+          <div class="search" aria-label="Search">
+            <label class="sr-only" for="searchInput">Suche Pokémon</label>
+
+            <input
+              id="searchInput"
+              class="search__input"
+              type="text"
+              placeholder="Search Pokémon (min. 3 Buchstaben)"
+              autocomplete="off"
+            />
+
+            <button id="searchBtn" class="btn btn--primary" disabled>
+              Suche
+            </button>
+
+            <button id="clearBtn" class="btn btn--ghost" type="button">
+              Clear
+            </button>
+          </div>
+        </div>
+
+        <!-- Messages -->
+        <p id="searchMessage" class="message" aria-live="polite"></p>
+      </header>
+
     <script src="./js/templates.js"></script>
     <script src="./js/cache.js"></script>
     <script src="./js/api.js"></script>
