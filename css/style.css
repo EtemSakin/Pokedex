@@ -14,6 +14,8 @@ html {
 
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   background: #071a22;
   color: #eef6ff;
@@ -82,9 +84,7 @@ input {
   top: 0;
   z-index: 50;
   padding: 14px 0 10px;
-  background: rgba(7, 26, 34, 0.92);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #09212a;
 }
 
 .topbar__inner {
@@ -336,11 +336,12 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #09212a;
 }
 
 .footer-content {
   position: relative;
-  margin-top: 90px;
+  margin-top: 10x;
   display: flex;
   flex-direction: column;
   align-items: center;
